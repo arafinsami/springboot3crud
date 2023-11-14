@@ -4,7 +4,7 @@ package com.springboot3crud.service;
 import com.springboot3crud.dto.NoteDto;
 import com.springboot3crud.entity.Notes;
 import com.springboot3crud.exception.ResourceNotFoundException;
-import com.springboot3crud.haldler.NoteStoreHandler;
+import com.springboot3crud.handlar.NoteStoreHandler;
 import com.springboot3crud.mapper.NoteModelMapper;
 import com.springboot3crud.repository.NoteRepository;
 import com.springboot3crud.security.ActiveUserContext;
@@ -42,7 +42,6 @@ public class NotesService {
         return savedNotes;
     }
 
-
     @Transactional
     public Notes update(NoteDto dto) {
         Notes notes = noteRepository.findById(dto.getId()).orElseThrow(ResourceNotFoundException::new);
@@ -67,11 +66,6 @@ public class NotesService {
     @Transactional(readOnly = true)
     public Optional<Notes> findByAppUserAndTitle(String title) {
         return noteRepository.findByAppUserAndTitle(context.getLoggedInUser(), title);
-    }
-
-    @Transactional(readOnly = true)
-    public Optional<Notes> findByAppUser() {
-        return noteRepository.findByAppUser(context.getLoggedInUser());
     }
 
     @Transactional

@@ -2,7 +2,7 @@ package com.springboot3crud.mapper;
 
 import com.springboot3crud.dto.NoteDto;
 import com.springboot3crud.entity.Notes;
-import com.springboot3crud.haldler.NoteStoreHandler;
+import com.springboot3crud.handlar.NoteStoreHandler;
 
 public class NoteModelMapper {
 

@@ -1,4 +1,4 @@
-package com.springboot3crud.haldler;
+package com.springboot3crud.handlar;
 
 
 import com.springboot3crud.model.NotePriority;

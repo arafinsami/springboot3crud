@@ -4,7 +4,7 @@ package com.springboot3crud.controller;
 import com.springboot3crud.dto.NoteDto;
 import com.springboot3crud.entity.Notes;
 import com.springboot3crud.exception.ResourceNotFoundException;
-import com.springboot3crud.haldler.NoteStoreHandler;
+import com.springboot3crud.handlar.NoteStoreHandler;
 import com.springboot3crud.mapper.NoteModelMapper;
 import com.springboot3crud.service.NotesService;
 import com.springboot3crud.validation.NoteValidator;
